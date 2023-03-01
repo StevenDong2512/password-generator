@@ -15,10 +15,10 @@ var passwordGen = "";
 function generatePassword() {
   // Prompt user for password criteria
   inpLength = window.prompt("Please input the length of the password that you would like (between 8 and 128 characters)");
-  inpLower = confirm("Please select if you would like to include lowercases characters");
-  inpUpper = confirm("Please select if you would like to include uppercases characters");
-  inpNumbers = confirm("Please select if you'd like to include numbers in your password");
-  inpSpecial = confirm("Please select if you would like to include special characters");
+  inpLower = confirm("Please select if you would like to include lowercases characters. Select Cancel for No, Ok for Yes.");
+  inpUpper = confirm("Please select if you would like to include uppercases characters. Select Cancel for No, Ok for Yes.");
+  inpNumbers = confirm("Please select if you'd like to include numbers in your password. Select Cancel for No, Ok for Yes.");
+  inpSpecial = confirm("Please select if you would like to include special characters. Select Cancel for No, Ok for Yes.");
 
   // Input validation
   if (
@@ -27,7 +27,7 @@ function generatePassword() {
     inpLength > 128 ||
     (!inpLower && !inpUpper && !inpNumbers && !inpSpecial)
   ) {
-    alert("Please try again, your input is not valid.");
+    alert("Please try again, your input for password length is not valid.");
     return;
   }
 
